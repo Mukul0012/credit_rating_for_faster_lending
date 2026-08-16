@@ -3,9 +3,9 @@ import numpy as np
 import xgboost as xgb
 
 try:
-    from src.data_preprocessing import load_and_preprocess_data, get_train_test_split
+    from xgboost_credit_rating.src.data_preprocessing import load_and_preprocess_data, get_train_test_split
 except ImportError:
-    from data_preprocessing import load_and_preprocess_data, get_train_test_split
+    from src.data_preprocessing import load_and_preprocess_data, get_train_test_split
 
 
 def train_model(

@@ -6,9 +6,9 @@ import matplotlib.pyplot as plt
 
 # Flexible import handling whether script is run directly or as a module
 try:
-    from src.data_preprocessing import load_and_preprocess_data, get_train_test_split
+    from xgboost_credit_rating.src.data_preprocessing import load_and_preprocess_data, get_train_test_split
 except ImportError:
-    from data_preprocessing import load_and_preprocess_data, get_train_test_split
+    from xgboost_credit_rating.src.data_preprocessing import load_and_preprocess_data, get_train_test_split
 
 
 def evaluate_model(
