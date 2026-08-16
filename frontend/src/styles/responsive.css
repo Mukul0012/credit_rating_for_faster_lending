@@ -1,0 +1,52 @@
+/* Tablet */
+@media (max-width: 1024px) {
+  .stat-grid { grid-template-columns: repeat(2, 1fr); }
+  .steps-grid { grid-template-columns: repeat(2, 1fr); }
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-band-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-panel { max-width: 480px; }
+  .result-hero { grid-template-columns: 1fr; }
+  .metric-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .review-grid { grid-template-columns: repeat(2, 1fr); }
+  .field-row { grid-template-columns: 1fr; }
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+
+  .sidebar { position: fixed; left: -100%; top: 0; height: 100vh; z-index: 300; transition: left var(--transition-base); box-shadow: var(--shadow-lg); }
+  .sidebar.open { left: 0; }
+  .sidebar-backdrop.show { display: block; position: fixed; inset: 0; background: rgba(11,31,63,0.5); z-index: 290; }
+  .navbar-toggle { display: flex; }
+  .app-content { padding: 20px 16px 48px; }
+  .mobile-menu-btn { display: inline-flex !important; align-items: center; justify-content: center; }
+}
+
+/* Mobile */
+@media (max-width: 680px) {
+  .container { padding: 0 16px; }
+  .section { padding: 48px 0; }
+  .hero { padding: 56px 0 64px; }
+  .hero h1 { font-size: 30px; }
+  .hero-stats { flex-wrap: wrap; gap: 20px; }
+  .stat-grid { grid-template-columns: 1fr; }
+  .steps-grid { grid-template-columns: 1fr; }
+  .features-grid { grid-template-columns: 1fr; }
+  .stats-band-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .metric-grid { grid-template-columns: repeat(2, 1fr); }
+  .review-grid { grid-template-columns: 1fr; }
+  .navbar-links { display: none; }
+  .stepper-label { display: none; }
+  .cta-section { margin: 0; padding: 40px 24px; }
+  .cta-section h2 { font-size: 22px; }
+  .page-header { flex-direction: column; align-items: stretch; }
+  .page-header-actions { width: 100%; }
+
+  .data-table { min-width: 560px; }
+
+  .decision-banner { flex-direction: column; text-align: center; }
+  .auth-card { padding: 28px 22px; }
+  .filter-bar { flex-direction: column; align-items: stretch; }
+  .filter-bar .input-wrap { min-width: 0; }
+}
