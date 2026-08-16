@@ -15,22 +15,20 @@ An enterprise-ready, explainable machine learning pipeline designed for automate
 ---
 
 ## 📁 Repository Structure
-
-```text
-xgboost-credit-rating/
-├── data/
-│   └── raw/
-│       └── cleaned_credit_risk_dataset.csv
-├── models/
-│   ├── encoder.pkl                     # Fitted OneHotEncoder for categoricals
-│   ├── xgboost_credit_model.json       # Trained XGBoost model artifact
-│   └── feature_importance.png          # Visual feature importance output
-├── notebooks/                          # Prototyping & EDA notebooks
+xgboost_credit_rating/
+├── data/                          # Raw and processed datasets
+├── models/                        # Trained models & feature importance plots
+│   ├── encoder.pkl
+│   ├── feature_importance.png
+│   └── xgboost_credit_model.json
+├── notebooks/                     # Prototyping & EDA notebooks
 ├── src/
-│   ├── __init__.py                     # Package init & module exports
-│   ├── data_preprocessing.py           # Ingestion, mapping, ratios & encoding
-│   ├── train.py                        # Model fitting & artifact serialization
-│   ├── evaluate.py                     # Metric reporting & importance plotting
-│   └── predict.py                      # Real-time inference & SHAP explanations
-├── requirements.txt
-└── README.md
+│   ├── __init__.py                # Package init & module exports
+│   ├── data_preprocessing.py      # Ingestion, mapping, ratios & encoding
+│   ├── train.py                   # Model fitting & artifact serialization
+│   ├── evaluate.py                # Metric reporting & importance plotting
+│   └── predict.py                 # Real-time inference & SHAP explanations
+├── .gitignore                     # Ignored files configuration
+├── create_encoder.py              # Label encoder generation script
+├── README.md                      # Project documentation
+└── requirements.txt               # Dependencies list
