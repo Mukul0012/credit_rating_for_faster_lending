@@ -9,8 +9,8 @@ except ImportError:
 
 
 def train_model(
-    data_path="data/raw/cleaned_credit_risk_dataset.csv",
-    model_output_path="models/xgboost_credit_model.json"
+    data_path="xgboost_credit_rating/data/raw/cleaned_credit_risk_dataset.csv",
+    model_output_path="xgboost_credit_rating/models/xgboost_credit_model.json"
 ):
     """
     Preprocesses dataset, fits the regularized XGBoost classifier, 

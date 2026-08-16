@@ -12,9 +12,9 @@ except ImportError:
 
 
 def evaluate_model(
-    data_path='data/raw/cleaned_credit_risk_dataset.csv',
-    model_path='models/xgboost_credit_model.json',
-    plot_path='models/feature_importance.png'
+    data_path='xgboost_credit_rating/data/raw/cleaned_credit_risk_dataset.csv',
+    model_path='xgboost_credit_rating/models/xgboost_credit_model.json',
+    plot_path='xgboost_credit_rating/models/feature_importance.png'
 ):
     """
     Loads saved XGBoost model, applies optimal decision threshold search 

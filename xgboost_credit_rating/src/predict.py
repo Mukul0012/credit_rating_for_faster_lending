@@ -8,8 +8,8 @@ import shap
 
 def predict_credit_decision(
     raw_applicant_data,
-    model_path='models/xgboost_credit_model.json',
-    encoder_path='models/encoder.pkl',
+    model_path="xgboost_credit_rating/models/xgboost_credit_model.json",
+    encoder_path='xgboost_credit_rating/models/encoder.pkl',
     threshold=0.55
 ):
     """
