@@ -1,0 +1,16 @@
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.env
+
+data/
+outputs/
+.vscode/
+notebooks/
+reports/
+
+models/decision_tree_baseline.pkl
+models/decision_tree_final.pkl
+models/decision_tree_final_params.json
+models/decision_tree_tuning_results.csv
