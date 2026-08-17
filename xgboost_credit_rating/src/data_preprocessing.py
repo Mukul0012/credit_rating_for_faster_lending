@@ -15,7 +15,7 @@ def fit_and_save_encoder(df, categorical_cols, encoder_path="models/encoder.pkl"
     return encoder
 
 
-def load_and_preprocess_data(filepath):
+def load_and_preprocess_data(filepath="data/raw/cleaned_credit_risk_dataset.csv"):
     """Loads CSV, applies domain feature engineering and log transforms, encodes categoricals, and returns X, y, scale_pos_weight."""
     df = pd.read_csv(filepath)
 
@@ -72,6 +72,11 @@ def load_and_preprocess_data(filepath):
         )
         df = df.drop(columns=categorical_cols)
         df = pd.concat([df.reset_index(drop=True), encoded_df.reset_index(drop=True)], axis=1)
+
+    # Save processed dataframe to data/processed folder
+    processed_dir = "data/processed"
+    os.makedirs(processed_dir, exist_ok=True)
+    df.to_csv(os.path.join(processed_dir, "processed_credit_risk_dataset.csv"), index=False)
 
     # 6. Separate features and target
     X = df.drop(columns=["Decision"])
