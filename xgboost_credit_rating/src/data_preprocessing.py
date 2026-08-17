@@ -73,8 +73,9 @@ def load_and_preprocess_data(filepath="data/raw/cleaned_credit_risk_dataset.csv"
         df = df.drop(columns=categorical_cols)
         df = pd.concat([df.reset_index(drop=True), encoded_df.reset_index(drop=True)], axis=1)
 
-    # Save processed dataframe to data/processed folder
-    processed_dir = "data/processed"
+    # Save processed dataframe into xgboost_credit_rating/data/processed/
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    processed_dir = os.path.join(base_dir, "data", "processed")
     os.makedirs(processed_dir, exist_ok=True)
     df.to_csv(os.path.join(processed_dir, "processed_credit_risk_dataset.csv"), index=False)
 
